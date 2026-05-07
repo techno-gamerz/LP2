@@ -1,0 +1,6 @@
+scp sample.txt ubuntu@192.168.1.20:/home/ubuntu/
+scp -r myfolder ubuntu@192.168.1.20:/home/ubuntu/
+sftp ubuntu@192.168.1.20
+rsync -avz sample.txt ubuntu@192.168.1.20:/home/ubuntu/
+ssh ubuntu@192.168.1.20
+ls /home/ubuntu

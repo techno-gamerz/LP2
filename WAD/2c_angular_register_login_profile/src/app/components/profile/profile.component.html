@@ -1,0 +1,13 @@
+<section class="card" *ngIf="loggedIn && user; else loginMessage">
+    <h1>User Profile</h1>
+    <p><strong>Name:</strong> {{ user.name }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>City:</strong> {{ user.city }}</p>
+</section>
+
+<ng-template #loginMessage>
+    <section class="card">
+        <h1>Profile</h1>
+        <p>Please login to view user profile.</p>
+    </section>
+</ng-template>

@@ -1,0 +1,38 @@
+nav {
+    background: #212529;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    color: #ffffff;
+    margin-left: 16px;
+}
+
+main {
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+@media (max-width: 600px) {
+    nav {
+        display: block;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px 8px 0;
+    }
+
+    main {
+        margin: 20px;
+    }
+}

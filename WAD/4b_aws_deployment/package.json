@@ -1,0 +1,12 @@
+{
+  "name": "wad-aws-deployment",
+  "version": "1.0.0",
+  "description": "AWS Elastic Beanstalk deployment practical",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

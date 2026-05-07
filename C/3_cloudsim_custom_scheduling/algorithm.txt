@@ -1,0 +1,15 @@
+Custom Min-Min Scheduling Algorithm
+
+1. Start CloudSim simulation.
+2. Create datacenter with host, RAM, storage, bandwidth and processing elements.
+3. Create broker.
+4. Create virtual machines.
+5. Create cloudlets/tasks.
+6. For each cloudlet:
+   a. Calculate expected execution time on each VM.
+   b. Select VM with minimum completion time.
+   c. Bind cloudlet to selected VM.
+7. Submit VM list and cloudlet list to broker.
+8. Start simulation.
+9. Print cloudlet execution results.
+10. Stop simulation.

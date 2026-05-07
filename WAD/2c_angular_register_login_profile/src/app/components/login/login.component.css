@@ -1,0 +1,25 @@
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+}
+
+input,
+button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 12px;
+}
+
+button {
+    background: #198754;
+    border: 0;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}

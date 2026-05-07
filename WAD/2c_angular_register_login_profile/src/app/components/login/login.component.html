@@ -1,0 +1,9 @@
+<section class="card">
+    <h1>Login User</h1>
+    <form (ngSubmit)="login()">
+        <input type="email" name="email" placeholder="Email" [(ngModel)]="email" required>
+        <input type="password" name="password" placeholder="Password" [(ngModel)]="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <p class="error">{{ errorMessage }}</p>
+</section>

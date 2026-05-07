@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase GAE Datastore</title>
+    <style>
+        body {
+            background: #eef2f7;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        main {
+            background: #ffffff;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+        }
+
+        textarea,
+        button {
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 12px;
+            padding: 10px;
+        }
+
+        button {
+            background: #0d6efd;
+            color: #ffffff;
+            border: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Firebase Token Verification</h1>
+        <p>Paste Firebase ID token and submit it to Google App Engine backend.</p>
+        <textarea id="token" rows="7" placeholder="Firebase ID token"></textarea>
+        <button onclick="verifyToken()">Verify and Store</button>
+        <pre id="result"></pre>
+    </main>
+
+    <script>
+        async function verifyToken() {
+            const idToken = document.getElementById("token").value;
+            const response = await fetch("/verify", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ idToken: idToken })
+            });
+
+            const result = await response.json();
+            document.getElementById("result").textContent = JSON.stringify(result, null, 2);
+        }
+    </script>
+</body>
+</html>

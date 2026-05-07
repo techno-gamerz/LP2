@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Mini Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ecommerce Mini Project</h1>
+        <p>Full stack web application using HTML, CSS, JavaScript, Node.js, Express.js and MongoDB.</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Add Product</h2>
+            <form id="productForm">
+                <input type="text" id="productName" placeholder="Product Name" required>
+                <input type="number" id="productPrice" placeholder="Price" required>
+                <input type="text" id="productCategory" placeholder="Category" required>
+                <input type="number" id="productStock" placeholder="Stock" required>
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Products</h2>
+            <div id="products"></div>
+        </section>
+
+        <section class="card">
+            <h2>Place Order</h2>
+            <form id="orderForm">
+                <input type="text" id="customerName" placeholder="Customer Name" required>
+                <input type="text" id="orderProduct" placeholder="Product Name" required>
+                <input type="number" id="quantity" placeholder="Quantity" required>
+                <input type="number" id="totalAmount" placeholder="Total Amount" required>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

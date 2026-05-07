@@ -1,0 +1,9 @@
+openstack server list
+openstack image list
+openstack flavor list
+openstack network list
+openstack keypair create mykey > mykey.pem
+openstack server create --image Ubuntu --flavor m1.small --network private --key-name mykey vm1
+openstack floating ip create public
+openstack server add floating ip vm1 <floating_ip>
+ssh -i mykey.pem ubuntu@<floating_ip>
